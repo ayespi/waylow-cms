@@ -1,3 +1,3 @@
 class WeighIn < ApplicationRecord
-  has_many :participants
+  belongs_to :participant
 end

@@ -6,6 +6,7 @@ class CreateParticipants < ActiveRecord::Migration[5.0]
       t.string :name_last
       t.string :phone
       t.integer :team_id
+      t.integer :result_id
 
       t.timestamps
     end

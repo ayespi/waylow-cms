@@ -10,6 +10,7 @@ class ResultsController < ApplicationController
   # GET /results/1
   # GET /results/1.json
   def show
+    
   end
 
   # GET /results/new

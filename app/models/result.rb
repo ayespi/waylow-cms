@@ -1,3 +1,3 @@
 class Result < ApplicationRecord
-  has_many :participants
+  has_one :participant
 end

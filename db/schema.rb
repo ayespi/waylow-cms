@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160811170336) do
     t.string   "name_last"
     t.string   "phone"
     t.integer  "team_id"
+    t.integer  "result_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
