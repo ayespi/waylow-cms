@@ -1,0 +1,2 @@
+json.extract! weigh_in, :id, :participant_id, :team_id, :weight_begin, :weight_1, :weight_2, :weight_3, :weight_4, :weight_5, :weight_6, :weight_7, :weight_8, :weight_9, :weight_10, :weight_end, :created_at, :updated_at
+json.url weigh_in_url(weigh_in, format: :json)

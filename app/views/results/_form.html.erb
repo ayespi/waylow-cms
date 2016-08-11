@@ -1,0 +1,47 @@
+<%= form_for(result) do |f| %>
+  <% if result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(result.errors.count, "error") %> prohibited this result from being saved:</h2>
+
+      <ul>
+      <% result.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :participant_id %>
+    <%= f.number_field :participant_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :week_number %>
+    <%= f.number_field :week_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight_loss %>
+    <%= f.text_field :weight_loss %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight_loss_percent %>
+    <%= f.text_field :weight_loss_percent %>
+  </div>
+
+  <div class="field">
+    <%= f.label :overall_weight_loss %>
+    <%= f.text_field :overall_weight_loss %>
+  </div>
+
+  <div class="field">
+    <%= f.label :overall_weight_loss_percent %>
+    <%= f.text_field :overall_weight_loss_percent %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

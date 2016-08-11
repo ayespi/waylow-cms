@@ -1,0 +1,1 @@
+json.partial! "weigh_ins/weigh_in", weigh_in: @weigh_in

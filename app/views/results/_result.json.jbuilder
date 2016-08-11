@@ -1,0 +1,2 @@
+json.extract! result, :id, :participant_id, :week_number, :weight_loss, :weight_loss_percent, :overall_weight_loss, :overall_weight_loss_percent, :created_at, :updated_at
+json.url result_url(result, format: :json)

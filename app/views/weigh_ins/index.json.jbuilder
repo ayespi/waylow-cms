@@ -1,0 +1,1 @@
+json.array! @weigh_ins, partial: 'weigh_ins/weigh_in', as: :weigh_in

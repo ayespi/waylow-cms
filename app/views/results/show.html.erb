@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Participant:</strong>
+  <%= @result.participant_id %>
+</p>
+
+<p>
+  <strong>Week number:</strong>
+  <%= @result.week_number %>
+</p>
+
+<p>
+  <strong>Weight loss:</strong>
+  <%= @result.weight_loss %>
+</p>
+
+<p>
+  <strong>Weight loss percent:</strong>
+  <%= @result.weight_loss_percent %>
+</p>
+
+<p>
+  <strong>Overall weight loss:</strong>
+  <%= @result.overall_weight_loss %>
+</p>
+
+<p>
+  <strong>Overall weight loss percent:</strong>
+  <%= @result.overall_weight_loss_percent %>
+</p>
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>
