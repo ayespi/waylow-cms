@@ -1,34 +1,91 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Participant:</strong>
-  <%= @result.participant_id %>
+  <%= @weigh_in.participant.name_first %> <%= @weigh_in.participant.name_last %>
 </p>
 
-<p>
-  <strong>Week number:</strong>
-  <%= @result.week_number %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Weight Loss</th>
+      <th>Weight Loss(%)</th>
+      <th>Overall Weight Loss</th>
+      <th>Overall Weight Loss(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Week 1</td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_1, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_1)/@weigh_in.weight_begin), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_1, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_1)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 2</td>
+      <td><%= number_with_precision @weigh_in.weight_1-@weigh_in.weight_2, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_1-@weigh_in.weight_2)/@weigh_in.weight_1), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_2, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_2)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 3</td>
+      <td><%= number_with_precision @weigh_in.weight_2-@weigh_in.weight_3, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_2-@weigh_in.weight_3)/@weigh_in.weight_2), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_3, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_3)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 4</td>
+      <td><%= number_with_precision @weigh_in.weight_3-@weigh_in.weight_4, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_3-@weigh_in.weight_4)/@weigh_in.weight_3), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_4, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_4)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 5</td>
+      <td><%= number_with_precision @weigh_in.weight_4-@weigh_in.weight_5, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_4-@weigh_in.weight_5)/@weigh_in.weight_4), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_5, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_5)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 6</td>
+      <td><%= number_with_precision @weigh_in.weight_5-@weigh_in.weight_6, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_5-@weigh_in.weight_6)/@weigh_in.weight_5), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_6, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_6)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 7</td>
+      <td><%= number_with_precision @weigh_in.weight_6-@weigh_in.weight_7, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_6-@weigh_in.weight_7)/@weigh_in.weight_6), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_7, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_7)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 8</td>
+      <td><%= number_with_precision @weigh_in.weight_7-@weigh_in.weight_8, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_7-@weigh_in.weight_8)/@weigh_in.weight_7), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_8, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_8)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 9</td>
+      <td><%= number_with_precision @weigh_in.weight_8-@weigh_in.weight_9, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_8-@weigh_in.weight_9)/@weigh_in.weight_8), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_9, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_9)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+    <tr>
+      <td>Week 10</td>
+      <td><%= number_with_precision @weigh_in.weight_9-@weigh_in.weight_10, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_9-@weigh_in.weight_10)/@weigh_in.weight_9), precision: 5 %></td>
+      <td><%= number_with_precision @weigh_in.weight_begin-@weigh_in.weight_10, precision: 1 %></td>
+      <td><%= number_with_precision ((@weigh_in.weight_begin-@weigh_in.weight_10)/@weigh_in.weight_begin), precision: 5 %></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>
-  <strong>Weight loss:</strong>
-  <%= @result.weight_loss %>
-</p>
-
-<p>
-  <strong>Weight loss percent:</strong>
-  <%= @result.weight_loss_percent %>
-</p>
-
-<p>
-  <strong>Overall weight loss:</strong>
-  <%= @result.overall_weight_loss %>
-</p>
-
-<p>
-  <strong>Overall weight loss percent:</strong>
-  <%= @result.overall_weight_loss_percent %>
-</p>
-
-<%= link_to 'Edit', edit_result_path(@result) %> |
-<%= link_to 'Back', results_path %>
+<%= link_to 'Back', participants_path %>
