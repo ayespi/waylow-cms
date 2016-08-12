@@ -1,29 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @participant.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @participant.email %>
+    </p>
 
-<p>
-  <strong>Name first:</strong>
-  <%= @participant.name_first %>
-</p>
+    <p>
+      <strong>Name first:</strong>
+      <%= @participant.name_first %>
+    </p>
 
-<p>
-  <strong>Name last:</strong>
-  <%= @participant.name_last %>
-</p>
+    <p>
+      <strong>Name last:</strong>
+      <%= @participant.name_last %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @participant.phone %>
-</p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @participant.phone %>
+    </p>
 
-<p>
-  <strong>Team:</strong>
-  <%= @participant.team_id %>
-</p>
+    <p>
+      <strong>Team:</strong>
+      <%= @participant.team_id %>
+    </p>
 
-<%= link_to 'Edit', edit_participant_path(@participant) %> |
-<%= link_to 'Back', participants_path %>
+    <%= link_to 'Edit', edit_participant_path(@participant) %> |
+    <%= link_to 'Back', participants_path %>
+  </div>
+</div>
