@@ -2,7 +2,6 @@ WeighIn.destroy_all
 Participant.destroy_all
 Team.destroy_all
 
-
 weigh_ins = WeighIn.create([
  {
    "participant_id": 1,
@@ -646,6 +645,7 @@ weigh_ins = WeighIn.create([
  }
 ])
 
+
 participants = Participant.create([
  {
    "email": "testemail1@waylow.org",
@@ -928,6 +928,7 @@ participants = Participant.create([
    "team_id": 4
  }
 ])
+
 
 teams = Team.create([
   {
