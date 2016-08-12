@@ -11,8 +11,7 @@ class ResultsController < ApplicationController
   # GET /results/1.json
   def show
     @participant = Participant.find(params[:id])
-    @participant_id = @participant["id"]
-    @weigh_in = WeighIn.find(@participant_id)
+    @weigh_in = @participant.weigh_in
   end
 
   # GET /results/new

@@ -6,7 +6,6 @@ class CreateResults < ActiveRecord::Migration[5.0]
       t.decimal :weight_loss_percent
       t.decimal :overall_weight_loss
       t.decimal :overall_weight_loss_percent
-      t.references :participant
 
       t.timestamps
     end

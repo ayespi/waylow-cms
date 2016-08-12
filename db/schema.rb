@@ -31,10 +31,8 @@ ActiveRecord::Schema.define(version: 20160811170336) do
     t.decimal  "weight_loss_percent"
     t.decimal  "overall_weight_loss"
     t.decimal  "overall_weight_loss_percent"
-    t.integer  "participant_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.index ["participant_id"], name: "index_results_on_participant_id", using: :btree
   end
 
   create_table "teams", force: :cascade do |t|
