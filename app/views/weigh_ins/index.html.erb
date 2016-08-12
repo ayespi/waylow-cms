@@ -1,53 +1,57 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<h1>Weigh Ins</h1>
+    <h1>Weigh Ins</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Participant</th>
-      <th>Team</th>
-      <th>Weight begin</th>
-      <th>Weight 1</th>
-      <th>Weight 2</th>
-      <th>Weight 3</th>
-      <th>Weight 4</th>
-      <th>Weight 5</th>
-      <th>Weight 6</th>
-      <th>Weight 7</th>
-      <th>Weight 8</th>
-      <th>Weight 9</th>
-      <th>Weight 10</th>
-      <th>Weight end</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Participant</th>
+          <th>Team</th>
+          <th>Weight begin</th>
+          <th>Weight 1</th>
+          <th>Weight 2</th>
+          <th>Weight 3</th>
+          <th>Weight 4</th>
+          <th>Weight 5</th>
+          <th>Weight 6</th>
+          <th>Weight 7</th>
+          <th>Weight 8</th>
+          <th>Weight 9</th>
+          <th>Weight 10</th>
+          <th>Weight end</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @weigh_ins.each do |weigh_in| %>
-      <tr>
-        <td><%= weigh_in.participant_id %></td>
-        <td><%= weigh_in.team_id %></td>
-        <td><%= weigh_in.weight_begin %></td>
-        <td><%= weigh_in.weight_1 %></td>
-        <td><%= weigh_in.weight_2 %></td>
-        <td><%= weigh_in.weight_3 %></td>
-        <td><%= weigh_in.weight_4 %></td>
-        <td><%= weigh_in.weight_5 %></td>
-        <td><%= weigh_in.weight_6 %></td>
-        <td><%= weigh_in.weight_7 %></td>
-        <td><%= weigh_in.weight_8 %></td>
-        <td><%= weigh_in.weight_9 %></td>
-        <td><%= weigh_in.weight_10 %></td>
-        <td><%= weigh_in.weight_end %></td>
-        <td><%= link_to 'Show', weigh_in %></td>
-        <td><%= link_to 'Edit', edit_weigh_in_path(weigh_in) %></td>
-        <td><%= link_to 'Destroy', weigh_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @weigh_ins.each do |weigh_in| %>
+        <tr>
+          <td><%= weigh_in.participant_id %></td>
+          <td><%= weigh_in.team_id %></td>
+          <td><%= weigh_in.weight_begin %></td>
+          <td><%= weigh_in.weight_1 %></td>
+          <td><%= weigh_in.weight_2 %></td>
+          <td><%= weigh_in.weight_3 %></td>
+          <td><%= weigh_in.weight_4 %></td>
+          <td><%= weigh_in.weight_5 %></td>
+          <td><%= weigh_in.weight_6 %></td>
+          <td><%= weigh_in.weight_7 %></td>
+          <td><%= weigh_in.weight_8 %></td>
+          <td><%= weigh_in.weight_9 %></td>
+          <td><%= weigh_in.weight_10 %></td>
+          <td><%= weigh_in.weight_end %></td>
+          <td><%= link_to 'Show', weigh_in %></td>
+          <td><%= link_to 'Edit', edit_weigh_in_path(weigh_in) %></td>
+          <td><%= link_to 'Destroy', weigh_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Weigh In', new_weigh_in_path %>
+    <%= link_to 'New Weigh In', new_weigh_in_path %>
+  </div>
+</div>

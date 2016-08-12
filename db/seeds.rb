@@ -2,7 +2,7 @@ WeighIn.destroy_all
 Participant.destroy_all
 Team.destroy_all
 
-weigh_ins = WeighIn.create([
+weigh_ins = WeighIn.create!([
  {
    "participant_id": 1,
    "team_id": 1,
@@ -646,7 +646,7 @@ weigh_ins = WeighIn.create([
 ])
 
 
-participants = Participant.create([
+participants = Participant.create!([
  {
    "email": "testemail1@waylow.org",
    "name_first": "VALERIE",
